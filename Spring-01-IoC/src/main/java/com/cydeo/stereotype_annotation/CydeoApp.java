@@ -19,7 +19,8 @@ public class CydeoApp {
         Selenium selenium = container.getBean(Selenium.class);
         selenium.getTeachingHours();
 
-
+        PartTimeEmployee partTimeEmployee = container.getBean(PartTimeEmployee.class);
+        partTimeEmployee.creatAccount();
 
     }
 }
