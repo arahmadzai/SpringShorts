@@ -9,7 +9,12 @@ public class CarTestApp {
 
         ApplicationContext container = new AnnotationConfigApplicationContext(CarConfig.class);
 
+        Car car2 = container.getBean("c2",Car.class);
 
+        System.out.println("car2 = " + car2.getMake());
+
+        Car car = container.getBean(Car.class);
+        System.out.println("car = " + car);
 
 
     }
