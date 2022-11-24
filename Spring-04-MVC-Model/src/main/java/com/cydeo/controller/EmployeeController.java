@@ -2,6 +2,7 @@ package com.cydeo.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -14,6 +15,16 @@ public class EmployeeController {
 
         System.out.println(firstName);
         model.addAttribute("fname", firstName);
+
+        return "emp-register.html";
+    }
+
+    @RequestMapping("/add/{firstName}/{lastName}")
+    public String getInfo2(@PathVariable String firstName,@PathVariable String lastName, Model model){
+
+        model.addAttribute("fname",firstName);
+        model.addAttribute("lname",lastName);
+
 
         return "emp-register.html";
     }
