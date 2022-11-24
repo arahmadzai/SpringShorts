@@ -15,5 +15,14 @@ public class CydeoApp {
 
         java.getTeachingHours();
 
+        JavaService java2 = container.getBean(JavaService.class);
+
+        JavaService java3 = container.getBean(JavaService.class);
+
+        System.out.println(java2);
+        System.out.println(java3);
+
+        System.out.println(java2==java3);
+
     }
 }

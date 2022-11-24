@@ -3,7 +3,10 @@ package com.cydeo.service;
 import com.cydeo.repository.JavaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+
+//@Scope("prototype")
 @Component
 public class JavaService{
 
