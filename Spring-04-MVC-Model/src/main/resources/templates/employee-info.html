@@ -10,6 +10,29 @@ Firstname: <h3 th:text="${emp.firstName}"></h3>
 Lastname: <h3 th:text="${emp.lastName}"></h3>
 Salary: <h3 th:text="${emp.salary}"></h3>
 
+<!--Concatenation-->
+<h4 th:text="${'Hello ' + emp.firstName}"></h4>
+
+<!--Adding Links-->
+
+<a th:href="@{https://www.cydeo.com}">Home Page</a>
+
+<br>
+<a th:href="@{/employees}">Employee List</a>
+
+<!--Adding Query-->
+<br>
+<a th:href="@{/employees(name=Abid)}">Adding Query1</a>
+
+<br>
+<a th:href="@{/employees(name=${emp.firstName})}">Adding Query2</a>
+
+<div th:text="${emp.salary > 100000 ? 'Cool' : 'OK'}"></div>
+
+<div >
+  <span th:if="${emp.firstName == 'Abidullah'}">Hi Abid</span>
+  <span th:unless="${emp.firstName == 'Abidullah'}">Hi Employee</span>
+</div>
 
 </body>
 </html>
