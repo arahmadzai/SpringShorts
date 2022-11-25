@@ -10,14 +10,27 @@
 
 <ul>
 
-  <li th:text="${name}"></li>
-  <li>Ahmad</li>
-  <li>Abdullah</li>
-  <li>Ahmadzai</li>
+<!--  <li th:each="employee : ${employees}" th:text="${employee.firstName +' '+ employee.lastName + ' $' + employee.salary}"></li>-->
 
 </ul>
 
+<table>
+  <thead>
+    <tr>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>Salary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="employee : ${employees}">
+      <td th:text="${employee.firstName}"></td>
+      <td th:text="${employee.lastName}"></td>
+      <td th:text="${employee.salary}"></td>
+    </tr>
 
+  </tbody>
+</table>
 
 </body>
 </html>

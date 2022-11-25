@@ -30,8 +30,8 @@ Salary: <h3 th:text="${emp.salary}"></h3>
 <div th:text="${emp.salary > 100000 ? 'Cool' : 'OK'}"></div>
 
 <div >
-  <span th:if="${emp.firstName == 'Abidullah'}">Hi Abid</span>
-  <span th:unless="${emp.firstName == 'Abidullah'}">Hi Employee</span>
+  <span th:if="${emp.firstName == 'Abidullah'}">Hi Abid!</span>
+  <span th:unless="${emp.firstName == 'Abidullah'}">Hi Employee!</span>
 </div>
 
 </body>

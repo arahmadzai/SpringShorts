@@ -1,19 +1,40 @@
 package com.cydeo.controller;
 
 import com.cydeo.model.Employee;
+import com.github.javafaker.Faker;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Controller
 public class MainController {
 
+
+
+
     @RequestMapping("/employees")
     public String empList(Model model){
+        List<Employee> employeeList = new ArrayList<>();
+        Faker faker = new Faker();
+        employeeList.add(new Employee(faker.name().firstName(), faker.name().lastName(), faker.number().numberBetween(100000, 150000)));
+        employeeList.add(new Employee(faker.name().firstName(), faker.name().lastName(), faker.number().numberBetween(100000, 150000)));
+        employeeList.add(new Employee(faker.name().firstName(), faker.name().lastName(), faker.number().numberBetween(100000, 150000)));
+        employeeList.add(new Employee(faker.name().firstName(), faker.name().lastName(), faker.number().numberBetween(100000, 150000)));
+        employeeList.add(new Employee(faker.name().firstName(), faker.name().lastName(), faker.number().numberBetween(100000, 150000)));
+        employeeList.add(new Employee(faker.name().firstName(), faker.name().lastName(), faker.number().numberBetween(100000, 150000)));
+        employeeList.add(new Employee(faker.name().firstName(), faker.name().lastName(), faker.number().numberBetween(100000, 150000)));
+        employeeList.add(new Employee(faker.name().firstName(), faker.name().lastName(), faker.number().numberBetween(100000, 150000)));
+        employeeList.add(new Employee(faker.name().firstName(), faker.name().lastName(), faker.number().numberBetween(100000, 150000)));
+        employeeList.add(new Employee(faker.name().firstName(), faker.name().lastName(), faker.number().numberBetween(100000, 150000)));
+        employeeList.add(new Employee(faker.name().firstName(), faker.name().lastName(), faker.number().numberBetween(100000, 150000)));
+        employeeList.add(new Employee(faker.name().firstName(), faker.name().lastName(), faker.number().numberBetween(100000, 150000)));
 
-        model.addAttribute("name","Abidullah Rahimi");
+        model.addAttribute("employees",employeeList);
 
-        return "employee-list.html";
+        return "/employee-list";
     }
 
     @RequestMapping("/employee-info")
