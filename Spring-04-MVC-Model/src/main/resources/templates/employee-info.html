@@ -34,5 +34,7 @@ Salary: <h3 th:text="${emp.salary}"></h3>
   <span th:unless="${emp.firstName == 'Abidullah'}">Hi Employee!</span>
 </div>
 
+<div th:replace="/fragments/footer :: footer-fixed"></div>
+
 </body>
 </html>
