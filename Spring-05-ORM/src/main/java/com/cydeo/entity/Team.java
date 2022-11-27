@@ -22,4 +22,7 @@ public class Team extends BaseEntity{
 
     @Transient
     private String founder;
+
+    @OneToOne
+    private Coach coach;
 }
