@@ -7,6 +7,8 @@ import lombok.Data;
 import lombok.Generated;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -25,4 +27,7 @@ public class Team extends BaseEntity{
 
     @OneToOne
     private Coach coach;
+
+    @OneToMany(mappedBy = "team")
+    private List<Player> player;
 }
